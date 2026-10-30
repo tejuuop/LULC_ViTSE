@@ -1,0 +1,126 @@
+/home/rick/Projects/lulc/working/train_vitse.py:892: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if device.type == "cuda" else None
+Results will be saved in: ./outputs/20261013_022804
+Device: cuda
+Found 27000 images
+Classes: ['AnnualCrop', 'Forest', 'HerbaceousVegetation', 'Highway', 'Industrial', 'Pasture', 'PermanentCrop', 'Residential', 'River', 'SeaLake']
+Number of classes: 10
+Model parameters: 86.55 M
+/home/rick/Projects/lulc/working/train_vitse.py:563: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+Epoch 1/100 | Train Loss 1.9435 | Train Acc 0.2360 | Test Acc 0.2557 | Test F1 0.1417 | Kappa 0.1679
+Epoch 2/100 | Train Loss 1.8590 | Train Acc 0.2446 | Test Acc 0.2796 | Test F1 0.1850 | Kappa 0.1979
+Epoch 3/100 | Train Loss 1.6365 | Train Acc 0.3497 | Test Acc 0.3920 | Test F1 0.3486 | Kappa 0.3226
+Epoch 4/100 | Train Loss 1.3716 | Train Acc 0.4730 | Test Acc 0.4863 | Test F1 0.4398 | Kappa 0.4276
+Epoch 5/100 | Train Loss 1.2232 | Train Acc 0.5358 | Test Acc 0.5578 | Test F1 0.5210 | Kappa 0.5073
+Epoch 6/100 | Train Loss 1.1317 | Train Acc 0.5736 | Test Acc 0.6433 | Test F1 0.6152 | Kappa 0.6026
+Epoch 7/100 | Train Loss 1.0705 | Train Acc 0.6000 | Test Acc 0.6267 | Test F1 0.6022 | Kappa 0.5843
+Epoch 8/100 | Train Loss 0.9764 | Train Acc 0.6358 | Test Acc 0.6681 | Test F1 0.6484 | Kappa 0.6311
+Epoch 9/100 | Train Loss 0.9015 | Train Acc 0.6706 | Test Acc 0.7126 | Test F1 0.6962 | Kappa 0.6799
+Epoch 10/100 | Train Loss 0.8441 | Train Acc 0.6919 | Test Acc 0.7198 | Test F1 0.7088 | Kappa 0.6885
+Epoch 11/100 | Train Loss 0.7870 | Train Acc 0.7169 | Test Acc 0.7785 | Test F1 0.7715 | Kappa 0.7537
+Epoch 12/100 | Train Loss 0.7249 | Train Acc 0.7446 | Test Acc 0.7607 | Test F1 0.7509 | Kappa 0.7338
+Epoch 13/100 | Train Loss 0.6890 | Train Acc 0.7557 | Test Acc 0.8250 | Test F1 0.8149 | Kappa 0.8052
+Epoch 14/100 | Train Loss 0.6624 | Train Acc 0.7674 | Test Acc 0.8131 | Test F1 0.8034 | Kappa 0.7922
+Epoch 15/100 | Train Loss 0.6188 | Train Acc 0.7825 | Test Acc 0.8409 | Test F1 0.8362 | Kappa 0.8230
+Epoch 16/100 | Train Loss 0.5987 | Train Acc 0.7925 | Test Acc 0.8361 | Test F1 0.8260 | Kappa 0.8175
+Epoch 17/100 | Train Loss 0.6034 | Train Acc 0.7854 | Test Acc 0.8446 | Test F1 0.8391 | Kappa 0.8271
+Epoch 18/100 | Train Loss 0.5446 | Train Acc 0.8087 | Test Acc 0.8322 | Test F1 0.8265 | Kappa 0.8134
+Epoch 19/100 | Train Loss 0.5319 | Train Acc 0.8149 | Test Acc 0.8576 | Test F1 0.8492 | Kappa 0.8416
+Epoch 20/100 | Train Loss 0.5378 | Train Acc 0.8111 | Test Acc 0.8522 | Test F1 0.8470 | Kappa 0.8356
+Epoch 21/100 | Train Loss 0.5261 | Train Acc 0.8166 | Test Acc 0.8576 | Test F1 0.8515 | Kappa 0.8416
+Epoch 22/100 | Train Loss 0.4997 | Train Acc 0.8263 | Test Acc 0.8481 | Test F1 0.8419 | Kappa 0.8311
+Epoch 23/100 | Train Loss 0.4923 | Train Acc 0.8318 | Test Acc 0.8572 | Test F1 0.8508 | Kappa 0.8410
+Epoch 24/100 | Train Loss 0.4858 | Train Acc 0.8330 | Test Acc 0.8772 | Test F1 0.8721 | Kappa 0.8633
+Epoch 25/100 | Train Loss 0.4764 | Train Acc 0.8340 | Test Acc 0.8535 | Test F1 0.8470 | Kappa 0.8369
+Epoch 26/100 | Train Loss 0.4576 | Train Acc 0.8425 | Test Acc 0.8659 | Test F1 0.8615 | Kappa 0.8508
+Epoch 27/100 | Train Loss 0.4600 | Train Acc 0.8417 | Test Acc 0.8770 | Test F1 0.8709 | Kappa 0.8630
+Epoch 28/100 | Train Loss 0.4522 | Train Acc 0.8457 | Test Acc 0.8570 | Test F1 0.8489 | Kappa 0.8407
+Epoch 29/100 | Train Loss 0.4526 | Train Acc 0.8410 | Test Acc 0.8659 | Test F1 0.8599 | Kappa 0.8508
+Epoch 30/100 | Train Loss 0.4665 | Train Acc 0.8414 | Test Acc 0.8735 | Test F1 0.8678 | Kappa 0.8592
+Epoch 31/100 | Train Loss 0.4216 | Train Acc 0.8560 | Test Acc 0.8696 | Test F1 0.8634 | Kappa 0.8548
+Epoch 32/100 | Train Loss 0.4314 | Train Acc 0.8489 | Test Acc 0.8676 | Test F1 0.8620 | Kappa 0.8527
+Epoch 33/100 | Train Loss 0.4132 | Train Acc 0.8554 | Test Acc 0.8846 | Test F1 0.8796 | Kappa 0.8716
+Epoch 34/100 | Train Loss 0.4177 | Train Acc 0.8541 | Test Acc 0.8770 | Test F1 0.8711 | Kappa 0.8631
+Epoch 35/100 | Train Loss 0.4099 | Train Acc 0.8588 | Test Acc 0.8817 | Test F1 0.8747 | Kappa 0.8682
+Epoch 36/100 | Train Loss 0.4120 | Train Acc 0.8554 | Test Acc 0.8693 | Test F1 0.8644 | Kappa 0.8544
+Epoch 37/100 | Train Loss 0.3893 | Train Acc 0.8656 | Test Acc 0.8689 | Test F1 0.8617 | Kappa 0.8541
+Epoch 38/100 | Train Loss 0.4127 | Train Acc 0.8555 | Test Acc 0.8730 | Test F1 0.8674 | Kappa 0.8586
+Epoch 39/100 | Train Loss 0.3971 | Train Acc 0.8617 | Test Acc 0.8893 | Test F1 0.8852 | Kappa 0.8767
+Epoch 40/100 | Train Loss 0.3961 | Train Acc 0.8614 | Test Acc 0.8583 | Test F1 0.8521 | Kappa 0.8424
+Epoch 41/100 | Train Loss 0.3789 | Train Acc 0.8695 | Test Acc 0.8702 | Test F1 0.8620 | Kappa 0.8555
+Epoch 42/100 | Train Loss 0.3803 | Train Acc 0.8683 | Test Acc 0.8719 | Test F1 0.8641 | Kappa 0.8572
+Epoch 43/100 | Train Loss 0.3738 | Train Acc 0.8694 | Test Acc 0.8715 | Test F1 0.8683 | Kappa 0.8569
+Epoch 44/100 | Train Loss 0.3779 | Train Acc 0.8679 | Test Acc 0.8943 | Test F1 0.8897 | Kappa 0.8823
+Epoch 45/100 | Train Loss 0.3680 | Train Acc 0.8726 | Test Acc 0.8809 | Test F1 0.8768 | Kappa 0.8674
+Epoch 46/100 | Train Loss 0.3889 | Train Acc 0.8642 | Test Acc 0.8841 | Test F1 0.8799 | Kappa 0.8709
+Epoch 47/100 | Train Loss 0.3776 | Train Acc 0.8648 | Test Acc 0.8657 | Test F1 0.8597 | Kappa 0.8505
+Epoch 48/100 | Train Loss 0.3617 | Train Acc 0.8775 | Test Acc 0.8898 | Test F1 0.8811 | Kappa 0.8773
+Epoch 49/100 | Train Loss 0.3635 | Train Acc 0.8707 | Test Acc 0.8994 | Test F1 0.8946 | Kappa 0.8881
+Epoch 50/100 | Train Loss 0.3648 | Train Acc 0.8755 | Test Acc 0.8957 | Test F1 0.8919 | Kappa 0.8839
+Epoch 51/100 | Train Loss 0.3598 | Train Acc 0.8753 | Test Acc 0.8833 | Test F1 0.8762 | Kappa 0.8701
+Epoch 52/100 | Train Loss 0.3605 | Train Acc 0.8729 | Test Acc 0.8856 | Test F1 0.8804 | Kappa 0.8726
+Epoch 53/100 | Train Loss 0.3574 | Train Acc 0.8744 | Test Acc 0.8941 | Test F1 0.8893 | Kappa 0.8820
+Epoch 54/100 | Train Loss 0.3457 | Train Acc 0.8798 | Test Acc 0.8939 | Test F1 0.8890 | Kappa 0.8818
+Epoch 55/100 | Train Loss 0.3393 | Train Acc 0.8794 | Test Acc 0.8998 | Test F1 0.8958 | Kappa 0.8885
+Epoch 56/100 | Train Loss 0.3304 | Train Acc 0.8855 | Test Acc 0.8887 | Test F1 0.8831 | Kappa 0.8760
+Epoch 57/100 | Train Loss 0.3373 | Train Acc 0.8825 | Test Acc 0.8909 | Test F1 0.8864 | Kappa 0.8786
+Epoch 58/100 | Train Loss 0.3303 | Train Acc 0.8850 | Test Acc 0.9000 | Test F1 0.8954 | Kappa 0.8887
+Epoch 59/100 | Train Loss 0.3283 | Train Acc 0.8880 | Test Acc 0.8824 | Test F1 0.8768 | Kappa 0.8690
+Epoch 60/100 | Train Loss 0.3201 | Train Acc 0.8901 | Test Acc 0.8863 | Test F1 0.8814 | Kappa 0.8734
+Epoch 61/100 | Train Loss 0.3288 | Train Acc 0.8839 | Test Acc 0.8991 | Test F1 0.8945 | Kappa 0.8876
+Epoch 62/100 | Train Loss 0.3364 | Train Acc 0.8833 | Test Acc 0.8833 | Test F1 0.8778 | Kappa 0.8700
+Epoch 63/100 | Train Loss 0.3281 | Train Acc 0.8860 | Test Acc 0.8891 | Test F1 0.8842 | Kappa 0.8765
+Epoch 64/100 | Train Loss 0.3230 | Train Acc 0.8873 | Test Acc 0.8920 | Test F1 0.8864 | Kappa 0.8798
+Epoch 65/100 | Train Loss 0.3269 | Train Acc 0.8870 | Test Acc 0.9019 | Test F1 0.8973 | Kappa 0.8907
+Epoch 66/100 | Train Loss 0.3109 | Train Acc 0.8929 | Test Acc 0.8974 | Test F1 0.8942 | Kappa 0.8858
+Epoch 67/100 | Train Loss 0.3280 | Train Acc 0.8838 | Test Acc 0.8802 | Test F1 0.8744 | Kappa 0.8667
+Epoch 68/100 | Train Loss 0.3346 | Train Acc 0.8839 | Test Acc 0.8993 | Test F1 0.8948 | Kappa 0.8878
+Epoch 69/100 | Train Loss 0.3316 | Train Acc 0.8845 | Test Acc 0.9017 | Test F1 0.8975 | Kappa 0.8905
+Epoch 70/100 | Train Loss 0.3273 | Train Acc 0.8857 | Test Acc 0.9037 | Test F1 0.8993 | Kappa 0.8928
+Epoch 71/100 | Train Loss 0.3252 | Train Acc 0.8852 | Test Acc 0.8806 | Test F1 0.8755 | Kappa 0.8670
+Epoch 72/100 | Train Loss 0.3250 | Train Acc 0.8874 | Test Acc 0.8969 | Test F1 0.8911 | Kappa 0.8851
+Epoch 73/100 | Train Loss 0.3156 | Train Acc 0.8891 | Test Acc 0.8957 | Test F1 0.8901 | Kappa 0.8839
+Epoch 74/100 | Train Loss 0.3178 | Train Acc 0.8895 | Test Acc 0.8835 | Test F1 0.8779 | Kappa 0.8703
+Epoch 75/100 | Train Loss 0.3107 | Train Acc 0.8920 | Test Acc 0.8954 | Test F1 0.8913 | Kappa 0.8835
+Epoch 76/100 | Train Loss 0.3122 | Train Acc 0.8912 | Test Acc 0.9035 | Test F1 0.8999 | Kappa 0.8926
+Epoch 77/100 | Train Loss 0.3138 | Train Acc 0.8915 | Test Acc 0.9046 | Test F1 0.9006 | Kappa 0.8938
+Epoch 78/100 | Train Loss 0.3019 | Train Acc 0.8956 | Test Acc 0.9061 | Test F1 0.9012 | Kappa 0.8955
+Epoch 79/100 | Train Loss 0.3096 | Train Acc 0.8939 | Test Acc 0.8954 | Test F1 0.8906 | Kappa 0.8835
+Epoch 80/100 | Train Loss 0.2995 | Train Acc 0.8965 | Test Acc 0.8965 | Test F1 0.8918 | Kappa 0.8847
+Epoch 81/100 | Train Loss 0.2938 | Train Acc 0.8989 | Test Acc 0.8915 | Test F1 0.8867 | Kappa 0.8792
+Epoch 82/100 | Train Loss 0.2936 | Train Acc 0.8983 | Test Acc 0.8754 | Test F1 0.8701 | Kappa 0.8611
+Epoch 83/100 | Train Loss 0.2936 | Train Acc 0.8996 | Test Acc 0.8917 | Test F1 0.8872 | Kappa 0.8794
+Epoch 84/100 | Train Loss 0.3038 | Train Acc 0.8933 | Test Acc 0.8946 | Test F1 0.8890 | Kappa 0.8827
+Epoch 85/100 | Train Loss 0.2947 | Train Acc 0.8967 | Test Acc 0.8939 | Test F1 0.8909 | Kappa 0.8819
+Epoch 86/100 | Train Loss 0.2956 | Train Acc 0.8963 | Test Acc 0.9061 | Test F1 0.9026 | Kappa 0.8954
+Epoch 87/100 | Train Loss 0.2898 | Train Acc 0.8988 | Test Acc 0.8974 | Test F1 0.8928 | Kappa 0.8858
+Epoch 88/100 | Train Loss 0.2840 | Train Acc 0.9005 | Test Acc 0.8994 | Test F1 0.8947 | Kappa 0.8881
+Epoch 89/100 | Train Loss 0.2826 | Train Acc 0.9009 | Test Acc 0.9069 | Test F1 0.9027 | Kappa 0.8963
+Epoch 90/100 | Train Loss 0.2753 | Train Acc 0.9033 | Test Acc 0.9033 | Test F1 0.8987 | Kappa 0.8924
+Epoch 91/100 | Train Loss 0.2710 | Train Acc 0.9056 | Test Acc 0.8952 | Test F1 0.8897 | Kappa 0.8833
+Epoch 92/100 | Train Loss 0.2747 | Train Acc 0.9037 | Test Acc 0.8922 | Test F1 0.8878 | Kappa 0.8800
+Epoch 93/100 | Train Loss 0.2743 | Train Acc 0.9039 | Test Acc 0.8863 | Test F1 0.8823 | Kappa 0.8734
+Epoch 94/100 | Train Loss 0.2751 | Train Acc 0.9036 | Test Acc 0.8970 | Test F1 0.8921 | Kappa 0.8853
+Epoch 95/100 | Train Loss 0.2800 | Train Acc 0.9011 | Test Acc 0.8891 | Test F1 0.8834 | Kappa 0.8765
+Epoch 96/100 | Train Loss 0.2762 | Train Acc 0.9047 | Test Acc 0.8913 | Test F1 0.8866 | Kappa 0.8790
+Epoch 97/100 | Train Loss 0.2694 | Train Acc 0.9062 | Test Acc 0.9030 | Test F1 0.8989 | Kappa 0.8920
+Epoch 98/100 | Train Loss 0.2777 | Train Acc 0.9019 | Test Acc 0.8928 | Test F1 0.8883 | Kappa 0.8806
+Epoch 99/100 | Train Loss 0.2720 | Train Acc 0.9057 | Test Acc 0.9007 | Test F1 0.8950 | Kappa 0.8894
+Epoch 100/100 | Train Loss 0.2671 | Train Acc 0.9091 | Test Acc 0.9037 | Test F1 0.9001 | Kappa 0.8928
+Saved files:
+ - best_metrics.json
+ - best_model.pth
+ - confusion_best.csv
+ - confusion_final.csv
+ - final_metrics.json
+ - last_model.pth
+ - metrics.csv
+ - per_class_best.csv
+ - per_class_final.csv
+ - run_config.json
+ - summary.json
+ - test_predictions.csv
+ - test_split.csv
+ - train_split.csv
+Done. Results are inside: ./outputs/20261013_022804

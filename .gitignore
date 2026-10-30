@@ -1,0 +1,31 @@
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Model weights
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.keras
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Secrets
+.env
+.env.*
+!.env.example

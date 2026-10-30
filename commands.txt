@@ -1,0 +1,19 @@
+train_vitse:
+
+python train_vitse.py --data ./working --config smoke --epochs 2 --batch-size 32 --workers 2
+python train_vitse.py --data ./working --config smoke --epochs 5 --batch-size 32 --workers 2
+python train_vitse.py --data ./working --config smoke --mfa --mfa-fireflies 3 --mfa-iter 2 --mfa-eval-epochs 1 --epochs 5 --workers 2
+python train_vitse.py --data ./working --config overnight --epochs 100 --batch-size 16 --workers 2
+
+
+train_vitse_srgan:
+
+.venv/bin/python train_vitse_srgan.py --data ./EuroSAT-RGB --output ./outputs --config overnight --epochs 50 --batch-size 16 --workers 2 2>&1 | tee outputs/console_50ep_srgan.log
+
+
+.venv/bin/python run_best_model.py --module train_vitse --data ./EuroSAT-RGB --weights ./outputs/20261013_022804main_base/best_model.pth --run-config ./outputs/20261013_022804main_base/run_config.json --image ./EuroSAT-RGB/Forest/Forest_1.jpg
+
+.venv/bin/python make_seg_figure.py --module train_vitse --data ./EuroSAT-RGB --weights ./outputs/20261013_022804main_base/best_model.pth --run-config ./outputs/20261013_022804main_base/run_config.json --output ./outputs/20261013_022804main_base/visuals/segmentation_figure.png
+
+.venv/bin/python run_best_model.py --module train_vitse --data ./EuroSAT-RGB --weights ./outputs/20261013_022804main_base/best_model.pth --run-config ./outputs/20261013_022804main_base/run_config.json --image ./EuroSAT-RGB/Forest/Forest_1.jpg
+

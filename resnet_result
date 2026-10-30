@@ -1,0 +1,103 @@
+.venv ❯ python -c "import tensorflow as tf; print(tf.__version__); print(tf.config.list_physical_devices('GPU'))"
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791728233.367464  181398 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1791728233.503666  181398 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791728234.693910  181398 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2.22.0-rc0
+[PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+
+~/Projects/DL_CV/working 7s
+.venv ❯ MODEL_NAME=ResNet50 DATA_DIR=EuroSAT-RGB python train_eurosat.py
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791728422.065258  181788 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1791728422.931048  181788 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+TensorFlow version: 2.22.0-rc0
+GPUs: [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+Using model: ResNet50
+Data directory: EuroSAT-RGB
+Image size: 224
+Batch size: 64
+Found 27000 files belonging to 10 classes.
+Using 21600 files for training.
+Found 27000 files belonging to 10 classes.
+Using 5400 files for validation.
+Classes: ['AnnualCrop', 'Forest', 'HerbaceousVegetation', 'Highway', 'Industrial', 'Pasture', 'PermanentCrop', 'Residential', 'River', 'SeaLake']
+Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/resnet/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5
+94765736/94765736 ━━━━━━━━━━━━━━━━━━━━ 54s 1us/step
+Model: "EuroSAT_ResNet50"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ input_layer_1 (InputLayer)           │ (None, 224, 224, 3)         │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ augmentation (Sequential)            │ (None, 224, 224, 3)         │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ preprocess (Lambda)                  │ (None, 224, 224, 3)         │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ resnet50 (Functional)                │ (None, 7, 7, 2048)          │      23,587,712 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ global_average_pooling2d             │ (None, 2048)                │               0 │
+│ (GlobalAveragePooling2D)             │                             │                 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ (None, 2048)                │               0 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (None, 10)                  │          20,490 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 23,608,202 (90.06 MB)
+ Trainable params: 20,490 (80.04 KB)
+ Non-trainable params: 23,587,712 (89.98 MB)
+Training new classification head...
+/home/rick/Projects/DL_CV/working/.venv/lib/python3.14/site-packages/keras/src/trainers/epoch_iterator.py:74: UserWarning: `shuffle=True` was passed, but will be ignored since the data `x` was provided as a tf.data.Dataset. The Dataset is expected to already be shuffled (via `.shuffle(buffer_size)`).
+  self.data_adapter = data_adapters.get_data_adapter(
+Epoch 1/5
+338/338 ━━━━━━━━━━━━━━━━━━━━ 80s 221ms/step - accuracy: 0.7974 - loss: 0.6148 - val_accuracy: 0.9315 - val_loss: 0.2028
+Epoch 2/5
+338/338 ━━━━━━━━━━━━━━━━━━━━ 71s 211ms/step - accuracy: 0.8889 - loss: 0.3282 - val_accuracy: 0.9424 - val_loss: 0.1667
+Epoch 3/5
+338/338 ━━━━━━━━━━━━━━━━━━━━ 71s 210ms/step - accuracy: 0.9014 - loss: 0.2912 - val_accuracy: 0.9483 - val_loss: 0.1564
+Epoch 4/5
+338/338 ━━━━━━━━━━━━━━━━━━━━ 71s 209ms/step - accuracy: 0.9048 - loss: 0.2852 - val_accuracy: 0.9474 - val_loss: 0.1521
+Epoch 5/5
+338/338 ━━━━━━━━━━━━━━━━━━━━ 71s 210ms/step - accuracy: 0.9055 - loss: 0.2791 - val_accuracy: 0.9443 - val_loss: 0.1607
+Fine-tuning backbone...
+Epoch 1/5
+338/338 ━━━━━━━━━━━━━━━━━━━━ 99s 276ms/step - accuracy: 0.9297 - loss: 0.2207 - val_accuracy: 0.9648 - val_loss: 0.1046
+Epoch 2/5
+338/338 ━━━━━━━━━━━━━━━━━━━━ 87s 259ms/step - accuracy: 0.9524 - loss: 0.1397 - val_accuracy: 0.9698 - val_loss: 0.0899
+Epoch 3/5
+338/338 ━━━━━━━━━━━━━━━━━━━━ 88s 260ms/step - accuracy: 0.9608 - loss: 0.1155 - val_accuracy: 0.9748 - val_loss: 0.0795
+Epoch 4/5
+338/338 ━━━━━━━━━━━━━━━━━━━━ 87s 258ms/step - accuracy: 0.9678 - loss: 0.0997 - val_accuracy: 0.9748 - val_loss: 0.0698
+Epoch 5/5
+338/338 ━━━━━━━━━━━━━━━━━━━━ 87s 258ms/step - accuracy: 0.9705 - loss: 0.0885 - val_accuracy: 0.9722 - val_loss: 0.0895
+Evaluating...
+85/85 ━━━━━━━━━━━━━━━━━━━━ 14s 162ms/step - accuracy: 0.9748 - loss: 0.0698
+ResNet50 validation accuracy: 0.9748
+ResNet50 validation loss: 0.0698
+85/85 ━━━━━━━━━━━━━━━━━━━━ 15s 169ms/step
+
+Classification Report:
+                      precision    recall  f1-score   support
+
+          AnnualCrop       0.08      0.08      0.08       597
+              Forest       0.13      0.14      0.13       600
+HerbaceousVegetation       0.11      0.11      0.11       557
+             Highway       0.10      0.10      0.10       493
+          Industrial       0.09      0.08      0.08       512
+             Pasture       0.06      0.06      0.06       374
+       PermanentCrop       0.10      0.10      0.10       491
+         Residential       0.14      0.14      0.14       607
+               River       0.11      0.11      0.11       547
+             SeaLake       0.13      0.13      0.13       622
+
+            accuracy                           0.11      5400
+           macro avg       0.10      0.10      0.10      5400
+        weighted avg       0.11      0.11      0.11      5400
+
+Saved confusion matrix: ResNet50_confusion_matrix.png
+
+~/Projects/DL_CV/working 15m 9s
+.venv ❯

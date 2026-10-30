@@ -1,0 +1,48 @@
+{
+  "args": {
+    "data": "./EuroSAT-RGB",
+    "output": "./outputs",
+    "config": "smoke",
+    "epochs": 2,
+    "batch_size": 32,
+    "lr": null,
+    "device": "auto",
+    "workers": 2,
+    "seed": 42,
+    "no_predictions": false,
+    "mfa": false,
+    "mfa_fireflies": 3,
+    "mfa_iter": 2,
+    "mfa_eval_epochs": 1,
+    "mfa_train_samples": 768,
+    "mfa_test_samples": 384
+  },
+  "config": {
+    "image_size": 224,
+    "patch_size": 16,
+    "dim": 256,
+    "depth": 6,
+    "heads": 4,
+    "mlp_dim": 512,
+    "dropout": 0.2,
+    "batch_size": 32,
+    "epochs": 2,
+    "lr": 0.0001
+  },
+  "classes": [
+    "AnnualCrop",
+    "Forest",
+    "HerbaceousVegetation",
+    "Highway",
+    "Industrial",
+    "Pasture",
+    "PermanentCrop",
+    "Residential",
+    "River",
+    "SeaLake"
+  ],
+  "num_classes": 10,
+  "train_samples": 21600,
+  "test_samples": 5400,
+  "model_parameters_million": 3.41361
+}

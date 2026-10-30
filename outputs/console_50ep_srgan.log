@@ -1,0 +1,57 @@
+/home/rick/Projects/lulc/working/train_vitse_srgan.py:933: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler() if device.type == "cuda" else None
+Results will be saved in: ./outputs/20261015_033232
+Device: cuda
+Found 27000 images
+Classes: ['AnnualCrop', 'Forest', 'HerbaceousVegetation', 'Highway', 'Industrial', 'Pasture', 'PermanentCrop', 'Residential', 'River', 'SeaLake']
+Number of classes: 10
+Model parameters: 93.64 M
+/home/rick/Projects/lulc/working/train_vitse_srgan.py:604: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+Epoch 1/50 | Train Loss 2.3198 | Train Acc 0.1150 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 2/50 | Train Loss 2.3091 | Train Acc 0.1130 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 3/50 | Train Loss 2.3045 | Train Acc 0.1115 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 4/50 | Train Loss 2.3022 | Train Acc 0.1068 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 5/50 | Train Loss 2.2997 | Train Acc 0.1112 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 6/50 | Train Loss 2.2978 | Train Acc 0.1099 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 7/50 | Train Loss 2.2971 | Train Acc 0.1093 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 8/50 | Train Loss 2.2968 | Train Acc 0.1092 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 9/50 | Train Loss 2.2964 | Train Acc 0.1113 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 10/50 | Train Loss 2.2964 | Train Acc 0.1076 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 11/50 | Train Loss 2.2960 | Train Acc 0.1092 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 12/50 | Train Loss 2.3082 | Train Acc 0.1123 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 13/50 | Train Loss 2.3034 | Train Acc 0.1075 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 14/50 | Train Loss 2.3004 | Train Acc 0.1103 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 15/50 | Train Loss 2.2991 | Train Acc 0.1107 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 16/50 | Train Loss 2.2984 | Train Acc 0.1085 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 17/50 | Train Loss 2.2977 | Train Acc 0.1109 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 18/50 | Train Loss 2.2970 | Train Acc 0.1107 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 19/50 | Train Loss 2.2967 | Train Acc 0.1113 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 20/50 | Train Loss 2.2970 | Train Acc 0.1092 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 21/50 | Train Loss 2.2982 | Train Acc 0.1070 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 22/50 | Train Loss 2.2968 | Train Acc 0.1089 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 23/50 | Train Loss 2.2961 | Train Acc 0.1118 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 24/50 | Train Loss 2.2963 | Train Acc 0.1111 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 25/50 | Train Loss 2.2958 | Train Acc 0.1075 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 26/50 | Train Loss 2.2960 | Train Acc 0.1102 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 27/50 | Train Loss 2.2959 | Train Acc 0.1069 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 28/50 | Train Loss 2.2958 | Train Acc 0.1073 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 29/50 | Train Loss 2.2960 | Train Acc 0.1111 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 30/50 | Train Loss 2.2956 | Train Acc 0.1090 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 31/50 | Train Loss 2.2965 | Train Acc 0.1103 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 32/50 | Train Loss 2.2978 | Train Acc 0.1136 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 33/50 | Train Loss 2.2967 | Train Acc 0.1116 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 34/50 | Train Loss 2.2963 | Train Acc 0.1113 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 35/50 | Train Loss 2.2963 | Train Acc 0.1089 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 36/50 | Train Loss 2.2964 | Train Acc 0.1111 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 37/50 | Train Loss 2.2962 | Train Acc 0.1091 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 38/50 | Train Loss 2.2961 | Train Acc 0.1083 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 39/50 | Train Loss 2.2963 | Train Acc 0.1094 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 40/50 | Train Loss 2.2961 | Train Acc 0.1099 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 41/50 | Train Loss 2.2962 | Train Acc 0.1068 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 42/50 | Train Loss 2.2962 | Train Acc 0.1113 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 43/50 | Train Loss 2.2962 | Train Acc 0.1106 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 44/50 | Train Loss 2.2964 | Train Acc 0.1084 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 45/50 | Train Loss 2.2963 | Train Acc 0.1078 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 46/50 | Train Loss 2.2975 | Train Acc 0.1100 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
+Epoch 47/50 | Train Loss 2.2959 | Train Acc 0.1112 | Test Acc 0.1111 | Test F1 0.0200 | Kappa 0.0000
